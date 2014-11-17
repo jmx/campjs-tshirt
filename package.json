@@ -1,0 +1,26 @@
+{
+  "name": "campjs_iv_tshirt",
+  "version": "0.0.1",
+  "author": "James Macpherson & Lauren Rui",
+  "description": "Scripts/HTML/images to create tshirt design",
+  "browserify": {
+    "transform": [
+      "glslify",
+      "brfs"
+    ]
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "beefy main.js --open"
+  },
+  "dependencies": {
+    "beefy": "~2.1.1",
+    "brfs": "~1.2.0",
+    "browserify": "~6.2.0",
+    "game-shell-orbit-camera": "~1.0.0",
+    "gl-now": "~1.4.0",
+    "gl-shader": "~3.0.0",
+    "glslify": "~1.6.0",
+    "gl-matrix": "~2.1.0"
+  }
+}
