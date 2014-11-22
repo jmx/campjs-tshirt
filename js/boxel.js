@@ -8,43 +8,44 @@ var boxel = function (gl, x, y, z, r, g, b, a) {
 
 boxel.prototype.generate_vertices = function () {
     var i = 0;
+    var d = 0.5;
     // create faces
     this.vertices = [
         // Front face
-        -0.5, -0.5,  0.5,
-         0.5, -0.5,  0.5,
-         0.5,  0.5,  0.5,
-        -0.5,  0.5,  0.5,
+        -d, -d,  d,
+         d, -d,  d,
+         d,  d,  d,
+        -d,  d,  d,
 
         // Back face
-        -0.5, -0.5, -0.5,
-        -0.5,  0.5, -0.5,
-         0.5,  0.5, -0.5,
-         0.5, -0.5, -0.5,
+        -d, -d, -d,
+        -d,  d, -d,
+         d,  d, -d,
+         d, -d, -d,
 
         // Top face
-        -0.5,  0.5, -0.5,
-        -0.5,  0.5,  0.5,
-         0.5,  0.5,  0.5,
-         0.5,  0.5, -0.5,
+        -d,  d, -d,
+        -d,  d,  d,
+         d,  d,  d,
+         d,  d, -d,
 
         // Bottom face
-        -0.5, -0.5, -0.5,
-         0.5, -0.5, -0.5,
-         0.5, -0.5,  0.5,
-        -0.5, -0.5,  0.5,
+        -d, -d, -d,
+         d, -d, -d,
+         d, -d,  d,
+        -d, -d,  d,
 
         // Right face
-         0.5, -0.5, -0.5,
-         0.5,  0.5, -0.5,
-         0.5,  0.5,  0.5,
-         0.5, -0.5,  0.5,
+         d, -d, -d,
+         d,  d, -d,
+         d,  d,  d,
+         d, -d,  d,
 
         // Left face
-        -0.5, -0.5, -0.5,
-        -0.5, -0.5,  0.5,
-        -0.5,  0.5,  0.5,
-        -0.5,  0.5, -0.5
+        -d, -d, -d,
+        -d, -d,  d,
+        -d,  d,  d,
+        -d,  d, -d
     ];
     for (i=0; i<this.vertices.length; i+=3) {
         this.vertices[i] += this.x;
